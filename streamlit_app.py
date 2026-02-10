@@ -21,7 +21,7 @@ if "messages" not in st.session_state.keys():  # Initialize the chat messages hi
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Ask me a question about Rabindranath Tagore!!",
+            "content": "Ask me a question about Sharesly!!",
         }
     ]
 
@@ -48,7 +48,7 @@ def load_data():
     Answer the question using the provided documents, which contain relevant excerpts from the work of Sharesly Rodriguez.
     The context for all questions is the work of Sharesly. Whenever possible, include a quotation from the provided excerpts of his work to illustrate your point.
     Respond using a direct tone, and a bunch of emojis.
-    Respond in fewer than 100 words.""",
+    Respond in fewer than 100 words. You should not answer questions outside of the scope of your documents.""",
     )
     index = VectorStoreIndex.from_documents(docs)
     return index
